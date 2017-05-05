@@ -18,9 +18,10 @@
 }
 
 -(NSString *)description {
-    NSMutableString *result = [[[super description] mutableCopy]autorelease];
-    [result appendString:[NSString stringWithFormat:@" isBlocked:%@;\n", [self getBoolLiteral:[self isBlocked]]]];
-    return result;
+//    NSMutableString *result = [[[super description] mutableCopy]autorelease];
+//    [result appendString:[NSString stringWithFormat:@" isBlocked:%@;\n", [self getBoolLiteral:[self isBlocked]]]];
+//    return result;
+    return [NSString stringWithFormat:@"%@; isBlocked:%@;\n",[super description], [self getBoolLiteral:[self isBlocked]]];
 }
 
 -(void)dealloc {
