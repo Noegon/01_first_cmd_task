@@ -10,14 +10,14 @@
  
 @implementation NGNUser (NGNPersonBirthday)
 
--(void)setBirthDayFromString:(NSString *)dateString {
+- (void)setBirthDayFromString:(NSString *)dateString {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"LL/dd/yyyy"];
     self.birthDate = [formatter dateFromString:dateString]; //already in autorelease pool, but retains by birthDate setter
     [formatter release]; // here I release local object created by alloc-init methods
 }
 
--(BOOL)isTodayBirthDate {
+- (BOOL)isTodayBirthDate {
     if (self.birthDate == nil) {
         NSLog(@"%@", @"birth date is nil! Please, insert birth date");
         return NO;

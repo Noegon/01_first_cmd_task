@@ -8,8 +8,8 @@
 
 #import "NGNUser.h"
 
-@interface NGNFriend : NGNUser
+@interface NGNFriend: NGNUser
 @property(nonatomic, copy)NSNumber *blocked;
 
--(BOOL)isBlocked;
+- (BOOL)isBlocked;
 @end

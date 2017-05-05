@@ -25,10 +25,10 @@
 // but there is a variant without protocol - extension only
 @interface NGNUser ()
 /**Returns boolean literal: yes or no*/
--(NSString *)getBoolLiteral:(BOOL)boolValue;
+- (NSString *)getBoolLiteral:(BOOL)boolValue;
 
 /**Returns date in pretty format*/
--(NSString *)getPrettyDate:(NSDate *)date;
+- (NSString *)getPrettyDate:(NSDate *)date;
 @end
 
 // Main scheme of making protected methods

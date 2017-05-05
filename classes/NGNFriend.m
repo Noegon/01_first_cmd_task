@@ -11,19 +11,19 @@
 
 @implementation NGNFriend
 
--(BOOL)isBlocked {
+- (BOOL)isBlocked {
 //    return ([self.blocked integerValue] > 0) ? YES : NO;
     // or like that
     return self.blocked.integerValue > 0;
 }
 
--(NSString *)description {
+- (NSString *)description {
     NSMutableString *result = [[[super description] mutableCopy]autorelease];
     [result appendString:[NSString stringWithFormat:@" isBlocked:%@;\n", [self getBoolLiteral:[self isBlocked]]]];
     return result;
 }
 
--(void)dealloc {
+- (void)dealloc {
     [_blocked release];
     [super dealloc];
 }
